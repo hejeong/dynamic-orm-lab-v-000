@@ -60,6 +60,6 @@ class InteractiveRecord
     sql = <<-SQL
           SELECT * FROM #{self.table_name} WHERE #{attribute.keys.first.to_s} = ?
           SQL
-    DB[:conn].execute(sql, attribute.value)
+    DB[:conn].execute(sql, attribute.values.first)
   end
 end
