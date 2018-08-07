@@ -30,4 +30,10 @@ class InteractiveRecord
       name == "id"
     end.join(", ")
   end
+
+  def values_for_insert
+    self.class.column_names.map do |name|
+      
+    end
+  end
 end
