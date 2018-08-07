@@ -25,5 +25,7 @@ class InteractiveRecord
     self.class.to_s.downcase.pluralize
   end
 
-
+  def col_names_for_insert
+    self.class.column_names.delete_if {|name| name == id}
+  end
 end
