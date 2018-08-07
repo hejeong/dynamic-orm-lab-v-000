@@ -13,5 +13,8 @@ class InteractiveRecord
       names << info_hash["name"]
     end
     names
+    binding.pry
   end
+
+  
 end
