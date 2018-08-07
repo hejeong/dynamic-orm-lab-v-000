@@ -12,5 +12,6 @@ class InteractiveRecord
     info.each do |info_hash|
       names << info_hash["name"]
     end
+    names
   end
 end
