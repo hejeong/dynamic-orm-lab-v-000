@@ -16,5 +16,5 @@ class InteractiveRecord
     binding.pry
   end
 
-  
+
 end
