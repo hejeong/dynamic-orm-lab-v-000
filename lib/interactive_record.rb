@@ -15,5 +15,11 @@ class InteractiveRecord
     names
   end
 
+  def initialize(attribute_hash)
+    attribute_hash.each do |attribute, value|
+      self.send("#{attribute}=", value)
+    end
+  end
+
 
 end
