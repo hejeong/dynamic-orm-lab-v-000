@@ -42,7 +42,7 @@ class InteractiveRecord
   def save
     sql = <<-SQL
           INSERT #{self.table_name_for_insert} (#{self.col_names_for_insert})
-          VALUES (#{values_for_insert})
+          VALUES (#{values_for_insert});
           SQL
   end
 end
