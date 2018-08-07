@@ -32,6 +32,7 @@ class InteractiveRecord
   end
 
   def values_for_insert
+    columns = self.class.column_names.delete_if {|name| name == "id"}
     values = self.class.column_names.map do |name|
       if name != "id"
         self.send(name)
