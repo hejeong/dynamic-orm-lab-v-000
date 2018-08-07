@@ -3,6 +3,6 @@ require 'active_support/inflector'
 require 'pry'
 class InteractiveRecord
   def self.table_name
-    self.class.downcase.pluralize
+    self.class.to_s.downcase.pluralize
   end
 end
